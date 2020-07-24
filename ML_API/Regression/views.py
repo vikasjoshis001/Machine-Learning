@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import pickle
@@ -26,6 +27,3 @@ class Regression(APIView):
         rank = regressor.predict(per)
         rank = int(rank)
         return Response({"Your Expected MHTCET Rank is",rank})
-
-        # // {"pcm": "94.3186", "maths": "92.6142","physics":"87.0958","chemistry":"96.6291"}
-

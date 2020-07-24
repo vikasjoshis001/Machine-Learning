@@ -29,10 +29,3 @@ result = accuracie.mean()
 # Prediction
 rank_pred = regressor.predict(percentile_test)
 
-# Visualisation
-plt.scatter(percentile_train,rank_train,color="blue")
-plt.plot(percentile_test,rank_test,color="red")
-plt.title("MHTCET Rank Predictor")
-plt.xlabel("Percentile")
-plt.ylabel("Rank")
-plt.show()

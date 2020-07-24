@@ -1,5 +1,5 @@
 """
-WSGI config for rank_predictor_api project.
+WSGI config for car_evaluation project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rank_predictor_api.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'car_evaluation.settings')
 
 application = get_wsgi_application()

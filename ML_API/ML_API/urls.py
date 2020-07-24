@@ -1,4 +1,4 @@
-"""rank_predictor_api URL Configuration
+"""ML_API URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from Regression.views import Regression
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('per/',Regression.as_view())
+
 ]
