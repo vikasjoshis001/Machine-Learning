@@ -42,7 +42,7 @@ y_train_enc, y_test_enc = prepare_targets(y_train, y_test)
 from sklearn.tree import DecisionTreeClassifier
 classifier = DecisionTreeClassifier(criterion="entropy")
 classifier.fit(X_train_enc,y_train_enc)
-pickle.dump(classifier,open("car evaluation.pk","wb"),protocol=2)
+# pickle.dump(classifier,open("car evaluation.pk","wb"),protocol=2)
 
 # K-fold Cross Validation
 from sklearn.model_selection import cross_val_score
@@ -83,3 +83,9 @@ cm = confusion_matrix(y_test_enc, y_pred)
 # high = 0 
 # med = 2
 # low = 1
+
+# for result
+# unacc = 2
+# acc = 0
+# good = 1
+# vgood = 3

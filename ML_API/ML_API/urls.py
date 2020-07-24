@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Regression.views import Regression
+from Classification.views import Classification
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('per/',Regression.as_view())
+    path('rank/',Regression.as_view()),
+    path('car/',Classification.as_view())
+
 
 ]
