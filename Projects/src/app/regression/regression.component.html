@@ -1,0 +1,70 @@
+<div class="container">
+
+    <br>
+    <h3><b><i>MHTCET Rank Predictor</i></b></h3><br><br>
+
+    <form #regressionform="ngForm" (ngSubmit)="onSubmit(regressionform)">
+        <div *ngIf="show" class="alert alert-info alert-dismissible">
+            <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Congrats!</strong> Your Expected MHTCET Rank is {{rank}}
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="pcm">MHTCET PCM Percentile</label>
+            <input #pcm="ngModel" pattern="^100$|^\d{0,2}(\.\d{1,2})? *%?$" required type="text" class="form-control"
+                id="pcm" aria-describedby="pcm" placeholder="Enter PCM Percentile" ngModel name="pcm">
+            <span *ngIf="pcm.invalid && pcm.touched" style="color:red"><b>**Please Enter Percentile upto two decimal
+                    points</b></span>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="maths">Maths Percentile</label>
+            <input #maths="ngModel" pattern="^100$|^\d{0,2}(\.\d{1,2})? *%?$" required type="text" class="form-control"
+                id="maths" aria-describedby="maths" placeholder="Enter Maths Percentile" ngModel name="maths">
+            <span *ngIf="maths.invalid && maths.touched" style="color:red"><b>**Please Enter Percentile upto two decimal
+                    points</b></span>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="physics">Physics Percentile</label>
+            <input #physics="ngModel" pattern="^100$|^\d{0,2}(\.\d{1,2})? *%?$" required type="text"
+                class="form-control" id="physics" aria-describedby="physics" placeholder="Enter Physics Percentile"
+                ngModel name="physics">
+            <span *ngIf="physics.invalid && physics.touched" style="color:red"><b>**Please Enter Percentile upto two
+                    decimal points</b></span>
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="chemistry">Chemistry Percentile</label>
+            <input #chemistry="ngModel" pattern="^100$|^\d{0,2}(\.\d{1,2})? *%?$" required type="text"
+                class="form-control" id="chemistry" aria-describedby="chemistry"
+                placeholder="Enter Chemistry Percentile" ngModel name="chemistry">
+            <span *ngIf="chemistry.invalid && chemistry.touched" style="color:red"><b>**Please Enter Percentile upto two
+                    decimal points</b></span>
+        </div>
+        <br>
+        <label for="cast">Select Cast</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="cast">Cast</label>
+            </div>
+            <select requirred ngModel name="cast" class="custom-select" id="cast">
+                <option value="0">General</option>
+                <option value="1">OBC</option>
+                <option value="1">SC</option>
+                <option value="3">ST</option>
+                <option value="4">PWD</option>
+                <option value="4">EWS</option>
+                <option value="6">NT1</option>
+                <option value="7">NT2</option>
+                <option value="8">NT3</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="regressionform.invalid" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+
+<router-outlet></router-outlet>

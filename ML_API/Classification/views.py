@@ -7,6 +7,7 @@ import numpy as np
 class Classification(APIView):
 
     def post(self,request):
+        car = request.data.get("car")
         price = request.data.get("price")
         maintenance_cost = request.data.get("maintenance_cost")
         no_of_doors = request.data.get("no_of_doors")
@@ -14,6 +15,7 @@ class Classification(APIView):
         lug_boot = request.data.get("lug_boot")
         safety = request.data.get("safety")
         data = {
+            "car":car,
             "price":price,
             "maintenance_cost":maintenance_cost,
             "no_of_doors":no_of_doors,
@@ -29,11 +31,8 @@ class Classification(APIView):
         lug_boot = int(lug_boot)
         safety = int(safety)
 
-        print(price)
-
         classifier = pickle.load(open("car evaluation.pk","rb"))
         evaluate = np.array([[price,maintenance_cost,no_of_doors,no_of_peoples,lug_boot,safety]])
-        print(evaluate)
         result = classifier.predict(evaluate)
         result = int(result)
         return Response(result)

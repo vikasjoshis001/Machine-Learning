@@ -12,18 +12,21 @@ class Regression(APIView):
         maths = request.data.get("maths")
         physics = request.data.get("physics")
         chemistry = request.data.get("chemistry")
-        data = {
-            "pcm":pcm,
-            "maths":maths,
-            "physics":physics, 
-            "chemistry":chemistry
-        }
-        regressor = pickle.load(open("rank_predictor.pk","rb"))
+        cast = request.data.get("cast")
         pcm = float(pcm)
         maths = float(maths)
         physics = float(physics)
         chemistry = float(chemistry)
+        data = {
+            "pcm":pcm,
+            "maths":maths,
+            "physics":physics, 
+            "chemistry":chemistry,
+            "cast":cast
+        }
+        regressor = pickle.load(open("rank_predictor.pk","rb"))
         per = np.array([[pcm,maths,physics,chemistry]])
         rank = regressor.predict(per)
         rank = int(rank)
-        return Response({"Your Expected MHTCET Rank is",rank})
+        print(rank)
+        return Response(rank)

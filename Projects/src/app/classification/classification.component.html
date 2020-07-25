@@ -1,0 +1,159 @@
+<div class="container">
+
+    <br>
+    <h3><b><i>Car Evaluation</i></b></h3><br><br>
+
+    <form #classificationform="ngForm" (ngSubmit)="onSubmit(classificationform)">
+        <div *ngIf="show" class="alert alert-info alert-dismissible">
+            <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            Your choice of Car is {{evaluate}}
+        </div>
+        <br>
+        <label for="car">Car Company</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="car">Car</label>
+            </div>
+            <select requirred ngModel name="car" class="custom-select" id="car">
+                <option value="0">Abarth</option>
+                <option value="1">Acura</option>
+                <option value="2">Alfa Romeo</option>
+                <option value="3">Aston Martin</option>
+                <option value="4">Audi</option>
+                <option value="5">Bentley</option>
+                <option value="6">BMW</option>
+                <option value="7">Buick</option>
+                <option value="8">Cadillac</option>
+                <option value="9" value="0">Chevrolet</option>
+                <option value="10">Chrysler</option>
+                <option value="11">Citroen</option>
+                <option value="12">Dacia</option>
+                <option value="13">Dodge</option>
+                <option value="14">Ferrari</option>
+                <option value="15">Fiat</option>
+                <option value="16">Ford</option>
+                <option value="17">GMC</option>
+                <option value="18">Honda</option>
+                <option value="19">Hummer</option>
+                <option value="20">Hyundai</option>
+                <option value="21">Infiniti</option>
+                <option value="22">Isuzu</option>
+                <option value="23">Jaguar</option>
+                <option value="24">Jeep</option>
+                <option value="25">Kia</option>
+                <option value="26">Lamborghini</option>
+                <option value="27" value="0">Lancia</option>
+                <option value="28">Land Rover</option>
+                <option value="29">Lexus</option>
+                <option value="30">Lincoln</option>
+                <option value="31">Lotus</option>
+                <option value="32">Maserati</option>
+                <option value="33">Mazda</option>
+                <option value="34">Mercedes-Benz</option>
+                <option value="35">Mercury</option>
+                <option value="36">Mini</option>
+                <option value="37">Mitsubishi</option>
+                <option value="38">Nissan</option>
+                <option value="39">Peugeot</option>
+                <option value="40">Pontiac</option>
+                <option value="41">Porsche</option>
+                <option value="42">Ram</option>
+                <option value="43">Renault</option>
+                <option value="44">Saab</option>
+                <option value="45">Saturn</option>
+                <option value="45">Scion</option>
+                <option value="46">Seat</option>
+                <option value="47">Skoda</option>
+                <option value="48">Smart</option>
+                <option value="49">SsangYong</option>
+                <option value="50">Subaru</option>
+                <option value="51">Suzuki</option>
+                <option value="52">Tesla</option>
+                <option value="53">Toyota</option>
+                <option value="54">TATA</option>
+                <option value="55">Volkswagen</option>
+                <option value="56">Volvo</option>
+                <option value="57">Wiesmann</option>
+            </select>
+        </div>
+        <br>
+        <label for="price">Buying Price</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="price">Price</label>
+            </div>
+            <select requirred ngModel name="price" class="custom-select" id="price">
+                <option value="3">Very High</option>
+                <option value="0">High</option>
+                <option value="2">Medium</option>
+                <option value="1">Low</option>
+            </select>
+        </div>
+        <br>
+        <label for="maintenance_cost">Maintenance Cost</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="maintenance_cost">Cost</label>
+            </div>
+            <select requirred ngModel name="maintenance_cost" class="custom-select" id="maintenance_cost">
+                <option value="3">Very High</option>
+                <option value="0">High</option>
+                <option value="2">Medium</option>
+                <option value="1">Low</option>
+            </select>
+        </div>
+        <br>
+        <label for="no_of_doors">Number of Doors</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="no_of_doors">Doors</label>
+            </div>
+            <select requirred ngModel name="no_of_doors" class="custom-select" id="no_of_doors">
+                <option value="0">2</option>
+                <option value="1">3</option>
+                <option value="2">4</option>
+                <option value="3">5 or More</option>
+            </select>
+        </div>
+        <br>
+        <label for="no_of_peoples">Number of Persons</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="no_of_peoples">Persons</label>
+            </div>
+            <select requirred ngModel name="no_of_peoples" class="custom-select" id="no_of_peoples">
+                    <option value="0">2</option>
+                    <option value="1">4</option>
+                    <option value="2">More</option>
+            </select>
+        </div>
+        <br>
+        <label for="lug_boot">LugBoot</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="lug_boot">LugBoot</label>
+            </div>
+            <select requirred ngModel name="lug_boot" class="custom-select" id="lug_boot">
+                    <option value="2">Small</option>
+                    <option value="1">Medium</option>
+                    <option value="0">Big</option>
+            </select>
+        </div>
+        <br>
+        <label for="safety">Safety</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="safety">Safety</label>
+            </div>
+            <select requirred ngModel name="safety" class="custom-select" id="safety">
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="0">High</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="classificationform.invalid" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<router-outlet></router-outlet>
