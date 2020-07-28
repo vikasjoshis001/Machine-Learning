@@ -1,7 +1,7 @@
 <div class="container">
 
     <br>
-    <h3><b><i>Car Evaluation</i></b></h3><br><br>
+    <h3><b><i>Car Evaluation</i></b></h3>
 
     <form #classificationform="ngForm" (ngSubmit)="onSubmit(classificationform)">
         <div *ngIf="show" class="alert alert-info alert-dismissible">
@@ -151,7 +151,9 @@
                     <option value="0">High</option>
             </select>
         </div>
-        <button type="submit" [disabled]="classificationform.invalid" class="btn btn-primary">Submit</button>
+        <div class="input-group mb-3">
+            <button type="submit" [disabled]="classificationform.invalid" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
 

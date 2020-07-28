@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegressionComponent {
   rank;
-  url = "http://127.0.0.1:8000/rank/";
+  url = "https://machine-learning-api.herokuapp.com/rank/";
   show = false;
 
   constructor(private http: HttpClient) { }

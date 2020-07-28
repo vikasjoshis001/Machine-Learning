@@ -1,0 +1,25 @@
+<div class="container">
+
+    <br>
+    <h3><b><i>Salary Predictor</i></b></h3><br>
+
+    <form #salaryform="ngForm" (ngSubmit)="onSubmit(salaryform)">
+        <div *ngIf="show" class="alert alert-info alert-dismissible">
+            <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>So!</strong> On Basis of your Experience your Salary is {{salary}}
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input #experience="ngModel" pattern="[0-9]+(\.[0-9]?)?" required type="text" class="form-control"
+                id="experience" aria-describedby="experience" placeholder="Enter Your Years of Experience" ngModel name="experience">
+            <span *ngIf="experience.invalid && experience.touched" style="color:red"><b>**Please Enter Your Years of Experience in two digits integer</b></span>
+        </div>
+        <br>
+        <button type="submit" [disabled]="salaryform.invalid" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,12 +1,12 @@
 <div class="container">
 
     <br>
-    <h3><b><i>MHTCET Rank Predictor</i></b></h3><br><br>
+    <h3><b><i>MHTCET Rank Predictor</i></b></h3><br>
 
     <form #regressionform="ngForm" (ngSubmit)="onSubmit(regressionform)">
         <div *ngIf="show" class="alert alert-info alert-dismissible">
             <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Congrats!</strong> Your Expected MHTCET Rank is {{rank}}
+            Your Expected MHTCET Rank is {{rank}}
         </div>
         <br>
         <div class="form-group">
@@ -61,6 +61,7 @@
                 <option value="8">NT3</option>
             </select>
         </div>
+        <br>
         <button type="submit" [disabled]="regressionform.invalid" class="btn btn-primary">Submit</button>
     </form>
 

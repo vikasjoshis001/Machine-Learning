@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from Regression.views import Regression
 from Classification.views import Classification
-
-
+from Clustering.views import Clustering
+from Salary.views import Salary
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('rank/',Regression.as_view()),
-    path('car/',Classification.as_view())
+    path('car/',Classification.as_view()),
+    path('profit/',Clustering.as_view()),
+    path('salary/',Salary.as_view())
 
 
 ]

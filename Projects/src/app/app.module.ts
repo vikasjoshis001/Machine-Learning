@@ -7,12 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegressionComponent } from './regression/regression.component';
 import { ClassificationComponent } from './classification/classification.component';
+import { ClusteringComponent } from './clustering/clustering.component';
+import { SalaryComponent } from './salary/salary.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegressionComponent,
-    ClassificationComponent
+    ClassificationComponent,
+    ClusteringComponent,
+    SalaryComponent,
+    HomePageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

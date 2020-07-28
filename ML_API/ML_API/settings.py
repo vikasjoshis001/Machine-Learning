@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'Regression',
     'Classification',
+    'Clustering',
     'corsheaders',
+    'Salary',
 
 ]
 

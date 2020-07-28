@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClassificationComponent {
 
-  url="http://127.0.0.1:8000/car/";
+  url="https://machine-learning-api.herokuapp.com/car/";
   evaluate;
   show = false;
 
