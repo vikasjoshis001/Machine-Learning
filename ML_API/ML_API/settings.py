@@ -25,7 +25,7 @@ SECRET_KEY = 'h7nj=avs5m9l6*%=yntdm1urbg3!&r!r*y_ij3@(q2lidn4c$j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['machine-learning-api.herokuapp.com','127.0.0.1','0.0.0.1']
 CORS_ORIGIN_ALLOW_ALL = True
 
 

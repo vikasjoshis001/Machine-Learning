@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "machinelearning124": {
+      "hosting": {
+        "Projects": [
+          "machinelearning124"
+        ]
+      }
+    }
+  }
+}
