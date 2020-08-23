@@ -14,7 +14,7 @@ dataset = np.array(datasets)
 # rank = datasets.iloc[:,0].values
 
 # For Converting to excel
-workbook = xlsxwriter.Workbook('Rank_Predictor.xlsx') 
+workbook = xlsxwriter.Workbook('Rank_Prediction.xlsx') 
 worksheet = workbook.add_worksheet()  
 z = 0
 column = 0
@@ -40,7 +40,7 @@ for j in range(99,0,-1):
             break
         if k <= (z):
             content.append(dataset[k])
-            c += 9
+            c += 20
             # print(dataset[c])
         else:
             break
