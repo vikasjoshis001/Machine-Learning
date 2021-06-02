@@ -42,7 +42,7 @@ sklearn==0.0
 sqlparse==0.3.1
 stripe==2.43.0
 threadpoolctl==2.1.0
-urllib3==1.25.8
+urllib3==1.26.5
 virtualenv==20.0.26
 virtualenv-clone==0.5.4
 whitenoise==5.1.0
